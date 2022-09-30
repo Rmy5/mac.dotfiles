@@ -7,14 +7,21 @@ alias .....="cd ../../../.."
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias g="git"
-alias p="cd /Users/admin/Serv/pepsia"
+alias mamp_start="open -a MAMP\ PRO"
+alias cd_hp="cd /Users/admin/Serv/HeavenlyPapers"
+alias hp="mamp_start; cd_hp; sf_start -d; op;"
+alias mamp_stop="osascript -e 'quit app \"MAMP PRO\"'"
+alias hp_stop="cd_hp; sf_stop; mamp_stop"
 
 # Symfony
 alias bin="php bin/console"
-alias s="symfony serve"
+alias sf_start="symfony serve --allow-http"
+alias sf_stop="symfony local:server:stop"
+alias op="symfony open:local"
 
-#Yarn
-alias yw="yarn dev --watch"
+#NPM
+alias rd="npm run dev"
+alias lint="npm run lint"
 
 colorflag="-G"
 export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
